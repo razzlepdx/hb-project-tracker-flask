@@ -58,8 +58,12 @@ def get_student():
 
 @app.route("/project")
 def get_project_info():
-    """"""
-    pass
+    """ Show general information about a Hackbright project. """
+
+    project = request.args.get("project")
+
+
+
 
 if __name__ == "__main__":
     hackbright.connect_to_db(app)
