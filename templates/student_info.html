@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <title>Student Info</title>
+</head>
+<body>
+    <h1>{{ first }} {{ last }}</h1>
+
+    <p>GitHub Account: {{ github }}</p>
+
+    <h2>Projects and Grades</h2>
+    {% if projects|length > 0 %}
+
+        <ul>
+
+        {% for project in projects %}
+            <li>{{ project[0] }}: {{ project[1] }}</li>
+        {% endfor %}
+
+        </ul>
+
+    {% else %}
+
+        <p>{{ first }} has no grade information available at this time. </p>
+
+    {% endif %}
+
+
+</body>
+</html>
